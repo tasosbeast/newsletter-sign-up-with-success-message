@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* Import custom fonts */
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@theme {
+  /* Colors */
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-gray: #949494;
+  --color-blue: #242742;
+  --color-red: #ff6155;
+  --color-gradient-from: #ff6a3a;
+  --color-gradient-to: #ff527b;
+
+  /* Text */
+  --text-*: initial;
+  --text-large: 56px;
+  --text-large-mobile: 40px;
+  --text-normal: 16px;
+  --text-small: 12px;
+
+  /* Font families */
+  --font-roboto: "Roboto", sans-serif;
+
+  /* Spacing */
+  --spacing-*: initial;
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-700: 56px;
+  --spacing-800: 64px;
+  --spacing-900: 72px;
+  --spacing-1300: 104px;
+}
+
+@utility text-preset-1 {
+  @apply text-large font-roboto leading-none font-bold;
+}
+
+@utility text-preset-1-mobile {
+  @apply text-large-mobile font-roboto leading-none font-bold;
+}
+
+@utility text-preset-2-bold {
+  @apply text-normal font-roboto leading-normal font-bold;
+}
+
+@utility text-preset-2-regular {
+  @apply text-normal font-roboto leading-normal font-normal;
+}
+
+@utility text-preset-3 {
+  @apply text-small font-roboto leading-normal font-bold;
+}

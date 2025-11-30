@@ -1,19 +1,32 @@
 import Attribution from "./components/Attribution";
+import { description } from "./constants";
 
 function App() {
   return (
-    <section className="bg-white mx-auto">
-      <p className="text-3xl  ">hello</p>
+    <>
+      <section className="bg-white mx-auto max-w-[904px] flex gap-800 p-400 shadow-card rounded-[36px]">
+        <div>
+          <h1 className="text-preset-1">Stay updated!</h1>
+          <p className="text-preset-2-regular mt-400">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul className="mt-400 flex flex-col gap-100">
+            {description.map((item) => (
+              <li key={item.value} className="flex gap-200">
+                <img src={item.icon} alt="" />
+                <p>{item.value}</p>
+              </li>
+            ))}
+          </ul>
+          <form action="">
+            <input type="email" className="w-full" />
+            <button className="block">Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+        <div></div>
 
-      {/* <!-- Sign-up form start -->
+        {/* <!-- Sign-up form start -->
 
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
 
   Email address
   email@company.com
@@ -33,8 +46,9 @@ function App() {
 
   <!-- Success message end -->
    */}
+      </section>
       <Attribution />
-    </section>
+    </>
   );
 }
 

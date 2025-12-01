@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Button from "./Button";
+
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const Form = ({ onEmailSubmit }) => {
   const [email, setEmail] = useState("");
@@ -56,9 +58,7 @@ const Form = ({ onEmailSubmit }) => {
           required
         />
       </div>
-      <button className="block bg-blue w-full px-300 py-200 rounded-[8px] text-white text-preset-2-bold ">
-        Subscribe to monthly newsletter
-      </button>
+      <Button type="submit">Subscribe to monthly newsletter</Button>
     </form>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { iconSuccess } from "../assets/images";
+import Button from "./Button";
 
 const SuccessMessage = ({ email, setIsSubmitted }) => {
   return (
@@ -10,12 +11,7 @@ const SuccessMessage = ({ email, setIsSubmitted }) => {
         A confirmation email has been sent to <strong>{email}</strong>. Please
         open it and click the button inside to confirm your subscription.
       </p>
-      <button
-        onClick={() => setIsSubmitted(false)}
-        className=" block bg-blue w-full px-300 py-200 rounded-[8px] text-white text-preset-2-bold"
-      >
-        Dismiss message
-      </button>
+      <Button onClick={() => setIsSubmitted(false)}>Dismiss message</Button>
     </>
   );
 };

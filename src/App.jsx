@@ -15,19 +15,19 @@ function App() {
 
   return (
     <>
-      <section className="bg-white mx-auto max-w-[904px] flex items-center gap-800 p-400 shadow-card rounded-[36px]">
-        {!isSubmitted ? (
-          <>
-            <Content onEmailSubmit={handleEmailSubmit} />
-            <Image />
-          </>
-        ) : (
+      {!isSubmitted ? (
+        <section className="bg-white mx-auto max-w-[904px] flex items-center gap-800 p-400 shadow-card rounded-[36px]">
+          <Content onEmailSubmit={handleEmailSubmit} />
+          <Image />
+        </section>
+      ) : (
+        <section className="bg-white mx-auto flex items-start p-800 shadow-card rounded-[36px] flex-col gap-400 max-w-[504px] max-h-[520px]">
           <SuccessMessage
             email={submittedEmail}
             setIsSubmitted={setIsSubmitted}
           />
-        )}
-      </section>
+        </section>
+      )}
       <Attribution />
     </>
   );

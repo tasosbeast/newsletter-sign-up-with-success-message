@@ -1,6 +1,6 @@
 function Attribution() {
   return (
-    <div className="attribution absolute bottom-100 ">
+    <div className="attribution absolute bottom-100 opacity-50 text-gray ">
       Challenge by{" "}
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
         Frontend Mentor

@@ -3,7 +3,7 @@ import { description } from "../constants";
 import ListItem from "./ListItem";
 import Form from "./Form";
 
-const Content = () => {
+const Content = ({ onEmailSubmit }) => {
   return (
     <div className="">
       <h1 className="text-preset-1">Stay updated!</h1>
@@ -15,7 +15,7 @@ const Content = () => {
           <ListItem key={item.value} {...item} />
         ))}
       </ul>
-      <Form />
+      <Form onEmailSubmit={onEmailSubmit} />
     </div>
   );
 };

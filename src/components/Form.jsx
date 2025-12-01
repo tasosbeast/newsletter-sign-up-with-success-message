@@ -1,23 +1,26 @@
 import { useState } from "react";
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const Form = () => {
+const Form = ({ onEmailSubmit }) => {
   const [email, setEmail] = useState("");
-  const [isEmailInvalid, setIsEmailInvalid] = useState(false);
+  const [isEmailTouched, setIsEmailTouched] = useState(false);
+  const isEmailValid = emailRegex.test(email);
+  const showError = isEmailTouched && !isEmailValid;
+  const showSuccess = isEmailValid && isEmailTouched;
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const isValid = emailRegex.test(email);
-    setIsEmailInvalid(!isValid);
+    setIsEmailTouched(true);
 
-    if (!isValid) return; // stop submit if invalid
+    if (!isEmailValid) return; // stop submit if invalid
 
-    // submit logic here
+    // Call the parent callback with the email
+    onEmailSubmit(email);
   };
 
   const handleBlur = () => {
     if (email === "") return; // optional: don't show error on empty
-    setIsEmailInvalid(!emailRegex.test(email));
+    setIsEmailTouched(true);
   };
 
   return (
@@ -31,7 +34,7 @@ const Form = () => {
         <label htmlFor="email" className="text-preset-3">
           Email address
         </label>
-        {isEmailInvalid && (
+        {showError && (
           <span className="text-preset-3 text-red">Valid email required</span>
         )}
       </div>
@@ -39,9 +42,10 @@ const Form = () => {
         <input
           type="email"
           className={
-            "text-preset-2-regular w-full placeholder:text-gray border border-gray rounded-[8px] px-300 py-200 transition duration-300 ease-in-out focus:outline-none focus:border-gray hover:border-gray " +
-            (isEmailInvalid ? " border-red bg-[#ffe7e6] text-red" : "")
+            "text-preset-2-regular w-full placeholder:text-gray border border-gray rounded-[8px] px-300 py-200 transition duration-300 ease-in-out focus:outline-none focus:border-gray hover:border-gray" +
+            (showError ? " border-red bg-[#ffe7e6] text-red" : "")
           }
+          value={email}
           id="email"
           name="email"
           placeholder="email@company.com"

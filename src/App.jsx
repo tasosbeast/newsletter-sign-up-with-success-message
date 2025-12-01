@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Attribution from "./components/Attribution";
+
 import Content from "./components/Content";
 import Image from "./components/Image";
 import SuccessMessage from "./components/SuccessMessage";
@@ -28,7 +28,6 @@ function App() {
           />
         </section>
       )}
-      <Attribution />
     </>
   );
 }

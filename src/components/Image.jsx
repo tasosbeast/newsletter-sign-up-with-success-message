@@ -3,8 +3,12 @@ import { illustrationSignUpDesktop } from "../assets/images";
 
 const Image = () => {
   return (
-    <div className="max-w-[400px] max-h-[593px]">
-      <img src={illustrationSignUpDesktop} alt="" width={400} height={593} />
+    <div className="w-[400px] h-[593px] overflow-hidden rounded-[16px]">
+      <img
+        src={illustrationSignUpDesktop}
+        className="w-full h-full object-cover"
+        alt="desktop"
+      />
     </div>
   );
 };

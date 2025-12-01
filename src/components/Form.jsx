@@ -42,7 +42,7 @@ const Form = ({ onEmailSubmit }) => {
         <input
           type="email"
           className={
-            "text-preset-2-regular w-full placeholder:text-gray border border-gray rounded-[8px] px-300 py-200 transition duration-300 ease-in-out focus:outline-none focus:border-gray hover:border-gray" +
+            "placeholder:text-preset-2-regular w-full h-700 placeholder:text-gray border border-gray rounded-[8px] px-300 py-200 transition duration-300 ease-in-out outline-0 focus:border-gray hover:border-gray" +
             (showError ? " border-red bg-[#ffe7e6] text-red" : "")
           }
           value={email}

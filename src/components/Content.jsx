@@ -5,7 +5,7 @@ import Form from "./Form";
 
 const Content = ({ onEmailSubmit }) => {
   return (
-    <div className="">
+    <div className="max-w-[376px]">
       <h1 className="text-preset-1">Stay updated!</h1>
       <p className="text-preset-2-regular mt-400">
         Join 60,000+ product managers receiving monthly updates on:

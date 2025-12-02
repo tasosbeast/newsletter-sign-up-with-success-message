@@ -28,7 +28,7 @@ const Form = ({ onEmailSubmit }) => {
   return (
     <form
       action=""
-      className="mt-400 max-w-[376px]"
+      className="max-w-[376px]"
       onSubmit={handleSubmit}
       noValidate
     >

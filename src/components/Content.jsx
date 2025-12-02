@@ -5,12 +5,12 @@ import Form from "./Form";
 
 const Content = ({ onEmailSubmit }) => {
   return (
-    <div className="max-w-[376px]">
-      <h1 className="text-preset-1">Stay updated!</h1>
-      <p className="text-preset-2-regular mt-400">
+    <div className="min-w-[376px] flex flex-col gap-300 md:gap-400 order-2 md:order-1">
+      <h1 className="text-preset-1 text-blue">Stay updated!</h1>
+      <p className="text-preset-2-regular">
         Join 60,000+ product managers receiving monthly updates on:
       </p>
-      <ul className="mt-400 flex flex-col gap-100">
+      <ul className=" flex flex-col gap-100">
         {description.map((item) => (
           <ListItem key={item.value} {...item} />
         ))}

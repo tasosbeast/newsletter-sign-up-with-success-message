@@ -3,7 +3,7 @@ import {
   iconSuccess,
   illustrationSignUpDesktop,
   illustrationSignUpMobile,
-  illustrationSuccessTablet,
+  illustrationSignUpTablet,
 } from "../assets/images";
 
 export const description = [

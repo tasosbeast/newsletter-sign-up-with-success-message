@@ -7,7 +7,7 @@ import {
 
 const Image = () => {
   return (
-    <div className="lg:order-2 order-1 overflow-hidden">
+    <div className="lg:order-2 order-1 overflow-hidden w-full lg:w-[50%]">
       <picture className="w-full h-full object-cover">
         <source
           media="(min-width: 1025px)"

@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       {!isSubmitted ? (
-        <section className="bg-white mx-auto max-w-[608px] md:max-w-[904px] flex md:flex-row flex-col md:items-center items-start gap-500 md:gap-800 md:p-400 p-500 shadow-card rounded-[36px]">
+        <section className="bg-white mx-auto max-w-[608px] lg:max-w-[904px] flex lg:flex-row flex-col lg:items-center items-start gap-500 lg:gap-800 lg:p-400 sm:p-500 shadow-card rounded-none sm:rounded-[36px]">
           <Content onEmailSubmit={handleEmailSubmit} />
           <Image />
         </section>

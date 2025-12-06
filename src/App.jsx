@@ -21,7 +21,7 @@ function App() {
           <Image />
         </section>
       ) : (
-        <section className="bg-white mx-auto flex items-start p-800 shadow-card rounded-[36px] flex-col gap-400 max-w-[504px] max-h-[520px]">
+        <section className="bg-white mx-auto flex items-start px-300 py-800 sm:p-800 shadow-card rounded-none sm:rounded-[36px] flex-col gap-400 max-w-[504px]">
           <SuccessMessage
             email={submittedEmail}
             setIsSubmitted={setIsSubmitted}
